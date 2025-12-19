@@ -28,7 +28,7 @@ end
 
 if not commit or commit == 'main' then
 	local _, subbed = pcall(function()
-		return game:HttpGet('https://github.com/new-qwertyui/CatV5')
+		return game:HttpGet('https://github.com/random-projects-by-breif/cat-v5-without-profiles')
 	end)
 	commit = subbed:find('currentOid')
 	commit = commit and subbed:sub(commit + 13, commit + 52) or nil
@@ -316,7 +316,7 @@ local function downloadFile(path, func)
 		local suc, res = pcall(function()
 			local subbed = path:gsub('catrewrite/', '')
 			subbed = subbed:gsub(' ', '%%20')
-			return game:HttpGet('https://raw.githubusercontent.com/new-qwertyui/CatV5/'..commit..'/'..subbed, true)
+			return game:HttpGet('https://raw.githubusercontent.com/random-projects-by-breif/cat-v5-without-profiles/'..commit..'/'..subbed, true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
